@@ -1,0 +1,66 @@
+@import url('https://fonts.font.im/css2?family=Noto+Sans+SC:wght@100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    .no-scrollbar {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
+}
+
+/* 高度拉满 */
+body > #root {
+    height: 100vh;
+}
+
+body {
+    overflow: hidden;
+}
+
+/* 字体设置 */
+body {
+    font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial,
+    'PingFang SC', 'Hiragino Sans GB', STHeiti, 'Microsoft YaHei',
+    'Microsoft JhengHei', 'Source Han Sans SC', 'Noto Sans CJK SC',
+    'Source Han Sans CN', 'Source Han Sans TC', 'Noto Sans CJK TC',
+    'WenQuanYi Micro Hei', SimSun, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Disable text selection globally */
+* {
+    -webkit-touch-callout: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/* Allow text selection in specific elements */
+input, textarea, .text-selectable, .text-selectable * {
+    -webkit-touch-callout: default !important;
+    -moz-user-select: text !important;
+    -ms-user-select: text !important;
+    -webkit-user-select: text !important;
+    user-select: text !important;
+}
+
+.chat-bubble-warning * {
+    @apply [&_:has(:not([class^="hljs"]))]:text-warning-content text-warning-content;
+}
+
+.chat-bubble-primary * {
+    @apply [&_:has(:not([class^="hljs"]))]:text-primary-content text-primary-content;
+}
+
+.hljs{
+    background: none !important;
+}
+

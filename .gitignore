@@ -1,0 +1,10 @@
+__pycache__
+.idea
+backend/weights/*.onnx
+backend/flow_data
+backend/temp_img/*.png
+backend/temp_img/*.jpg
+backend/temp_wav/*
+*.db
+*.log
+public

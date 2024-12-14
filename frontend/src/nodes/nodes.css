@@ -1,0 +1,70 @@
+.node-card {
+    @apply overflow-hidden cursor-auto bg-base-100 transition-all shadow-xl drop-shadow-xl w-60;
+}
+
+.node-card {
+    @apply rounded-xl border-4 border-transparent;
+}
+
+.selected .node-card {
+    @apply group-has-[.dragging]:shadow-2xl group-has-[.dragging]:drop-shadow-2xl group-has-[.dragging]:border-transparent border-warning border-dashed;
+}
+
+.view-mode {
+    @apply w-full !bg-transparent !shadow-none;
+}
+
+.react-flow__nodesselection-rect {
+    @apply shadow-2xl drop-shadow-2xl;
+}
+
+.node-header {
+    @apply justify-center items-center flex h-9;
+}
+.node-header-drag{
+    @apply cursor-grab active:cursor-grabbing;
+}
+
+.context-menu {
+    @apply drop-shadow-xl shadow-xl bg-base-100 z-50 absolute rounded-xl;
+}
+
+.divider {
+    @apply !my-1
+}
+
+
+.react-flow__handle-right {
+    @apply !stroke-info-content !bg-info;
+}
+
+.react-flow__handle-left {
+    @apply !stroke-warning-content !bg-warning;
+}
+
+.react-flow__handle-fake {
+    @apply !stroke-success-content !bg-success;
+}
+
+.react-flow__handle {
+    @apply transform-none w-6 p-0 btn btn-square btn-xs flex justify-center items-center !static;
+}
+
+.handle_btn {
+    @apply -mr-7 z-10 mt-1 pointer-events-none size-4;
+}
+
+.handle_X_btn {
+    @apply -mr-7 z-10 mt-1 pointer-events-none size-4;
+}
+
+.react-flow__controls {
+    @apply form-control gap-2 shadow-none;
+}
+
+.react-flow__controls-button {
+    @apply !btn !shadow-2xl !btn-primary stroke-primary-content fill-primary-content !btn-circle;
+}
+.react-flow__controls-button:disabled {
+    @apply !bg-primary !bg-opacity-50;
+}
